@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin</title>
 
+  <link
+    rel="icon"
+    type="image/png"
+    href="../vendors/images/favicon-16x16.png"
+/>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet"> 
@@ -36,13 +42,13 @@
 
   
   <!-- Header -->
-  <header class="w-full h-screen bg-[url('assets/img/leaves.jpg')] bg-cover bg-bottom">  
+  <header class="w-full h-screen bg-[url('public/assets/img/leaves.jpg')] bg-cover bg-bottom">  
     <div class="h-full">
       <div class="flex h-full">
         <div class="w-full md:w-1/2 bg-gradient-to-b from-gray-900/90 to-gray-900/95 p-10 flex">
           <div class="w-full text-center my-auto">
-            <h1 class="font-bold text-5xl font-Comforter-Brush text-amber-500 my-10 md:text-right">Launcher.</h1>
-            <h6 class="font-Montserrat font-bold uppercase text-4xl md:text-5xl lg:text-6xl mb-14 md:-mr-20 text-white md:text-right">Coming <span class="text-white/70 md:-mr-20">soon</span></h6>
+            <h1 class="font-bold text-5xl font-Comforter-Brush text-amber-500 my-10 md:text-right">Aulas.</h1>
+            <h6 class="font-Montserrat font-bold uppercase text-4xl md:text-5xl lg:text-6xl mb-14 md:-mr-20 text-white md:text-right">Aguardando <span class="text-white/70 md:-mr-20">lançamento</span></h6>
 
             
             <!-- Count down -->
@@ -70,40 +76,6 @@
 
               </ul>
             </div>
-
-
-            <p class="text-base mb-14 text-gray-200 md:text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta reprehenderit delectus quasi eligendi maiores consectetur repellat necessitatibus libero deleniti quaerat debitis, odit earum modi. Magni porro iste dolores.</p>
-
-            <!-- Social media -->
-            <div class="w-full text-left flex mb-5">
-              <ul class="w-full flex place-content-center md:place-content-end gap-10 mx-auto text-gray-500">        
-                <li>
-                  <a href="#" class="text-lg hover:text-amber-500">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-lg hover:text-amber-500">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-lg hover:text-amber-500">
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-lg hover:text-amber-500">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-
           </div>
         </div>
         <div class="w-0 md:w-5/12 lg:w-1/2"></div>

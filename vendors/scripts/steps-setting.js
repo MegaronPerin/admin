@@ -4,7 +4,7 @@ $(".tab-wizard").steps({
 	transitionEffect: "fade",
 	titleTemplate: '<span class="step">#index#</span> #title#',
 	labels: {
-		finish: "Submit"
+		finish: "Cadastrar"
 	},
 	onStepChanged: function (event, currentIndex, priorIndex) {
 		$('.steps .current').prevAll().addClass('disabled');
@@ -14,20 +14,34 @@ $(".tab-wizard").steps({
 	}
 });
 
-$(".tab-wizard2").steps({
+var form = $("#formRegister");
+form.validate({
+    errorPlacement: function errorPlacement(error, element) { element.before(error); },
+    rules: {
+        confirm: {
+            equalTo: "#password"
+        }
+    }
+});
+form.steps({
 	headerTag: "h5",
 	bodyTag: "section",
 	transitionEffect: "fade",
 	titleTemplate: '<span class="step">#index#</span> <span class="info">#title#</span>',
 	labels: {
-		finish: "Submit",
-		next: "Next",
-		previous: "Previous",
+		finish: "Cadastrar",
+		next: "Proximo",
+		previous: "Anterior",
 	},
+	onStepChanging: function (event, currentIndex, newIndex)
+    {
+        form.validate().settings.ignore = ":disabled,:hidden";
+        return form.valid();
+    },
 	onStepChanged: function(event, currentIndex, priorIndex) {
 		$('.steps .current').prevAll().addClass('disabled');
 	},
 	onFinished: function(event, currentIndex) {
-		$('#success-modal-btn').trigger('click');
+		sendNewRegister();
 	}
 });
