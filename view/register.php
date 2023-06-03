@@ -12,7 +12,7 @@
 		<link
 			rel="stylesheet"
 			type="text/css"
-			href="../src/plugins/jquery-steps/jquery.steps.css"
+			href="src/plugins/jquery-steps/jquery.steps.css"
 		/>
 
 	</head>
@@ -24,12 +24,12 @@
 			>
 				<div class="brand-logo">
 					<a href="login.php">
-						<img src="../vendors/images/deskapp-logo.svg" alt="" />
+						<img src="vendors/images/deskapp-logo.svg" alt="" />
 					</a>
 				</div>
 				<div class="login-menu">
 					<ul>
-						<li><a href="login.php">Login</a></li>
+						<li><a href="/admin/login">Login</a></li>
 					</ul>
 				</div>
 			</div>
@@ -40,15 +40,25 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-md-6 col-lg-7">
-						<img src="../vendors/images/register-page-img.png" alt="" />
+						<img src="vendors/images/register-page-img.png" alt="" />
 					</div>
 					<div class="col-md-6 col-lg-5">
 						<div class="register-box bg-white box-shadow border-radius-10">
 							<div class="wizard-content">
 								<form class="wizard-circle wizard" id="formRegister" action="">
+
+									<input type="hidden" id="localBase" name="localBase" value="<?=CC_PASTA_INICIO;?>">
+									<input type="hidden" id="urlBase" name="urlBase" value="<?=CC_LOCAL_INICIO;?>">
+
 									<h5>Dados iniciais</h5>
 									<section>
 										<div class="form-wrap max-width-600 mx-auto">
+											<div class="form-group row">
+												<label class="col-sm-4 col-form-label">Nome*</label>
+												<div class="col-sm-8">
+													<input type="text" id="name"  name="name" class="form-control required" />
+												</div>
+											</div>
 											<div class="form-group row">
 												<label class="col-sm-4 col-form-label"
 													>Email *</label
@@ -87,6 +97,7 @@
 															type="radio"
 															id="masculino"
 															name="sexo"
+															value="M"
 															class="custom-control-input required"
 														/>
 														<label class="custom-control-label" for="masculino"
@@ -100,6 +111,7 @@
 															type="radio"
 															id="femimino"
 															name="sexo"
+															value="F"
 															class="custom-control-input required"
 														/>
 														<label class="custom-control-label" for="femimino"
@@ -168,32 +180,26 @@
 											<ul class="register-info">
 												<li>
 													<div class="row">
-														<div class="col-sm-4 weight-600">Email Address</div>
-														<div class="col-sm-8">example@abc.com</div>
+														<div class="col-sm-4 weight-600">Nome</div>
+														<div id="info_name" class="col-sm-8"></div>
 													</div>
 												</li>
 												<li>
 													<div class="row">
-														<div class="col-sm-4 weight-600">Username</div>
-														<div class="col-sm-8">Example</div>
+														<div class="col-sm-4 weight-600">Email</div>
+														<div id="info_email" class="col-sm-8"></div>
+													</div>
+												</li>												
+												<li>
+													<div class="row">
+														<div class="col-sm-4 weight-600">Data Nasc.</div>
+														<div id="info_dtnasc" class="col-sm-8"></div>
 													</div>
 												</li>
 												<li>
 													<div class="row">
-														<div class="col-sm-4 weight-600">Password</div>
-														<div class="col-sm-8">.....000</div>
-													</div>
-												</li>
-												<li>
-													<div class="row">
-														<div class="col-sm-4 weight-600">Full Name</div>
-														<div class="col-sm-8">john smith</div>
-													</div>
-												</li>
-												<li>
-													<div class="row">
-														<div class="col-sm-4 weight-600">Location</div>
-														<div class="col-sm-8">123 Example</div>
+														<div class="col-sm-4 weight-600">Endereço</div>
+														<div id="info_endereco" class="col-sm-8"></div>
 													</div>
 												</li>
 											</ul>
@@ -201,9 +207,10 @@
 												<input
 													type="checkbox"
 													class="custom-control-input"
-													id="customCheck1"
+													id="confirmInfo"
+													name="confirmInfo"
 												/>
-												<label class="custom-control-label" for="customCheck1"
+												<label class="custom-control-label" for="confirmInfo"
 													>Estou concordando com os dados a cima.</label
 												>
 											</div>
@@ -241,7 +248,7 @@
 					<div class="modal-body text-center font-18">
 						<h3 class="mb-20">Form Submitted!</h3>
 						<div class="mb-30 text-center">
-							<img src="../vendors/images/success.png" />
+							<img src="vendors/images/success.png" />
 						</div>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 						eiusmod
@@ -259,9 +266,9 @@
 		<?php
 			include('footer.php');
 		?>
-		<script src="../src/plugins/jquery-steps/jquery.steps.js"></script>		
-		<script src="../src/plugins/jquery-validation/jquery.validate.js"></script>
-		<script src="../src/plugins/jquery-validation/localization/messages_pt_BR.js"></script>		
-		<script src="../vendors/scripts/steps-setting.js"></script>
+		<script src="src/plugins/jquery-steps/jquery.steps.js"></script>		
+		<script src="src/plugins/jquery-validation/jquery.validate.js"></script>
+		<script src="src/plugins/jquery-validation/localization/messages_pt_BR.js"></script>		
+		<script src="vendors/scripts/steps-setting.js"></script>
 	</footer>
 </html>
