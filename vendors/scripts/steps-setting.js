@@ -19,7 +19,7 @@ form.validate({
     errorPlacement: function errorPlacement(error, element) { element.before(error); },
     rules: {
         confirm: {
-            equalTo: "#password"
+            equalTo: "#password",
         }
     }
 });
@@ -35,6 +35,11 @@ form.steps({
 	},
 	onStepChanging: function (event, currentIndex, newIndex)
     {
+
+		if(newIndex == 3){
+			confirmDataRegister();
+		}
+
         form.validate().settings.ignore = ":disabled,:hidden";
         return form.valid();
     },
@@ -42,6 +47,13 @@ form.steps({
 		$('.steps .current').prevAll().addClass('disabled');
 	},
 	onFinished: function(event, currentIndex) {
-		sendNewRegister();
+		
+		var check  = $('#confirmInfo:checked').val();
+
+		if(check === 'on'){
+			sendNewRegister();
+		}else{
+			alert('Por favor confirme os dados checando o box.');
+		}
 	}
 });

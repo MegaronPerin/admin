@@ -17,12 +17,12 @@
 			>
 				<div class="brand-logo">
 					<a href="login.php">
-						<img src="../vendors/images/deskapp-logo.svg" alt="" />
+						<img src="vendors/images/deskapp-logo.svg" alt="" />
 					</a>
 				</div>
 				<div class="login-menu">
 					<ul>
-						<li><a href="register.php">Register</a></li>
+						<li><a href="/admin/register">Register</a></li>
 					</ul>
 				</div>
 			</div>
@@ -33,7 +33,7 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-md-6 col-lg-7">
-						<img src="../vendors/images/login-page-img.png" alt="" />
+						<img src="vendors/images/login-page-img.png" alt="" />
 					</div>
 					<div class="col-md-6 col-lg-5">
 						<div class="login-box bg-white box-shadow border-radius-10">
@@ -47,7 +47,7 @@
 											<input type="radio" name="options" id="admin" />
 											<div class="icon">
 												<img
-													src="../vendors/images/briefcase.svg"
+													src="vendors/images/briefcase.svg"
 													class="svg"
 													alt=""
 												/>
@@ -59,7 +59,7 @@
 											<input type="radio" name="options" id="user" />
 											<div class="icon">
 												<img
-													src="../vendors/images/person.svg"
+													src="vendors/images/person.svg"
 													class="svg"
 													alt=""
 												/>
@@ -108,7 +108,7 @@
 									</div>
 									<div class="col-6">
 										<div class="forgot-password">
-											<a href="forgot-password.html">Forgot Password</a>
+											<a href="/admin/forgot-password">Forgot Password</a>
 										</div>
 									</div>
 								</div>
@@ -121,8 +121,8 @@
 										-->
 											<a
 												class="btn btn-primary btn-lg btn-block"
-												href="index.html"
-												>Sign In</a
+												href="/admin/login"
+												>Login</a
 											>
 										</div>
 										<div
@@ -134,8 +134,8 @@
 										<div class="input-group mb-0">
 											<a
 												class="btn btn-outline-primary btn-lg btn-block"
-												href="register.php"
-												>Register To Create Account</a
+												href="/admin/register"
+												>Criar Registro</a
 											>
 										</div>
 									</div>

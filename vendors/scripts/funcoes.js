@@ -63,6 +63,27 @@ function meu_callback(conteudo) {
     }
 }
 
+function confirmDataRegister(){
+
+    var name  = document.getElementById('name').value;
+    var email  = document.getElementById('email').value;
+    var dtnasc  = document.getElementById('dt-nascimento').value;
+    var cep  = document.getElementById('cep').value;
+    var endereco  = document.getElementById('endereco').value;
+    var bairro  = document.getElementById('bairro').value;
+    var cidade  = document.getElementById('cidade').value;
+    var uf  = document.getElementById('uf').value;
+    var complemento  = document.getElementById('complemento').value;
+
+    var logradouro = endereco + ", " + complemento + ", " + bairro + ", " + cidade + " - " + uf + " CEP: " + cep ;
+
+    document.getElementById('info_name').innerHTML = name;
+    document.getElementById('info_email').innerHTML = email;
+    document.getElementById('info_dtnasc').innerHTML = dtnasc;
+    document.getElementById('info_endereco').innerHTML = logradouro;
+
+}
+
 function sendNewRegister(){
 
     var form = document.querySelector('#formRegister');
@@ -72,13 +93,16 @@ function sendNewRegister(){
     formData.forEach((value, key) => (dataObj[key] = value));
 
     console.log(dataObj);
-    
-    axios.post('/user', dataObj)
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
 
+    var urlbase  = document.getElementById('urlBase').value;
+    
+      
+    axios.post(urlbase+'/login/cadastro', dataObj)
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+        console.log(error);
+    });
+    
 }
