@@ -17,7 +17,7 @@
 			>
 				<div class="brand-logo">
 					<a href="login.php">
-						<img src="vendors/images/deskapp-logo.svg" alt="" />
+						<img src="../vendors/images/deskapp-logo.svg" alt="" />
 					</a>
 				</div>
 				<div class="login-menu">
@@ -33,7 +33,7 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-md-6 col-lg-7">
-						<img src="vendors/images/login-page-img.png" alt="" />
+						<img src="../vendors/images/login-page-img.png" alt="" />
 					</div>
 					<div class="col-md-6 col-lg-5">
 						<div class="login-box bg-white box-shadow border-radius-10">
@@ -47,7 +47,7 @@
 											<input type="radio" name="options" id="admin" />
 											<div class="icon">
 												<img
-													src="vendors/images/briefcase.svg"
+													src="../vendors/images/briefcase.svg"
 													class="svg"
 													alt=""
 												/>
@@ -59,7 +59,7 @@
 											<input type="radio" name="options" id="user" />
 											<div class="icon">
 												<img
-													src="vendors/images/person.svg"
+													src="../vendors/images/person.svg"
 													class="svg"
 													alt=""
 												/>

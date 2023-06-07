@@ -12,7 +12,7 @@
 		<link
 			rel="stylesheet"
 			type="text/css"
-			href="src/plugins/jquery-steps/jquery.steps.css"
+			href="../src/plugins/jquery-steps/jquery.steps.css"
 		/>
 
 	</head>
@@ -24,7 +24,7 @@
 			>
 				<div class="brand-logo">
 					<a href="login.php">
-						<img src="vendors/images/deskapp-logo.svg" alt="" />
+						<img src="../vendors/images/deskapp-logo.svg" alt="" />
 					</a>
 				</div>
 				<div class="login-menu">
@@ -40,7 +40,7 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-md-6 col-lg-7">
-						<img src="vendors/images/register-page-img.png" alt="" />
+						<img src="../vendors/images/register-page-img.png" alt="" />
 					</div>
 					<div class="col-md-6 col-lg-5">
 						<div class="register-box bg-white box-shadow border-radius-10">
@@ -248,7 +248,7 @@
 					<div class="modal-body text-center font-18">
 						<h3 class="mb-20">Form Submitted!</h3>
 						<div class="mb-30 text-center">
-							<img src="vendors/images/success.png" />
+							<img src="../vendors/images/success.png" />
 						</div>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 						eiusmod
@@ -266,9 +266,9 @@
 		<?php
 			include('footer.php');
 		?>
-		<script src="src/plugins/jquery-steps/jquery.steps.js"></script>		
-		<script src="src/plugins/jquery-validation/jquery.validate.js"></script>
-		<script src="src/plugins/jquery-validation/localization/messages_pt_BR.js"></script>		
-		<script src="vendors/scripts/steps-setting.js"></script>
+		<script src="../src/plugins/jquery-steps/jquery.steps.js"></script>		
+		<script src="../src/plugins/jquery-validation/jquery.validate.js"></script>
+		<script src="../src/plugins/jquery-validation/localization/messages_pt_BR.js"></script>		
+		<script src="../vendors/scripts/steps-setting.js"></script>
 	</footer>
 </html>

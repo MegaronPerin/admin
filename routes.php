@@ -1,33 +1,27 @@
 <?php
 
-require_once('./config/config_ambiente_localhost.php');
+require_once('config/config_ambiente_localhost.php');
+require_once('router.php');
 
-require_once('./router.php');
+get('/', 'public/index.php');
 
-get('/admin', 'public/index.php');
+get('/login', '/view/login.php');
 
-get('/admin/login', 'view/login.php');
+get('/forgot-password', 'view/forgot-password.php');
 
-get('/admin/forgot-password', 'view/forgot-password.php');
-
-post('/admin/login/cadastro', 'controller/api.php');
-
-post('/admin/login/all', 'controller/api.php');
-
-post('/admin/login/$id', 'controller/api.php');
+post('/login/cadastro', 'controller/api.php');
 
 get('/admin/logout/$id', 'view/logout.php');
 
-get('/admin/register', 'view/register.php');
+get('/register', 'view/register.php');
 
-get('/admin/inicio', 'view/admin/dashboard.php');
+get('/admin', 'view/dashboard.php');
 
-get('/admin/user', 'view/admin/user/userList.php');
+get('/admin/user', 'view/user/userList.php');
 
-get('/admin/user/create', 'view/admin/user/userCreate.php');
+get('/admin/user/create', 'view/user/userCreate.php');
 
-get('/admin/user/$id', 'view/admin/user/user.php');
+get('/admin/user/$id', 'view/user/user.php');
 
-any('/admin/404','view/404.php');
+any('/404','view/404.php');
 
-?>
