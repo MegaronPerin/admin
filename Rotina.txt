@@ -52,3 +52,4 @@ Vocabulario
     1/1 - Relação pode ter apenas um vinculo de ambos os lados (Pessoa so pode ter um cpf e o cpf so pode ter uma pessoa)
     N/N - Relação pode não ter ou ter varios (Um pedido pode ter varios produtos e o produto pode esta em varios pedidos) OBS sempre é necessario ter uma tabela de ligação de pedido e produto para ter o controle
 
+OIIIII
